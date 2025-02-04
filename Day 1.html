@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bike Zone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            transition: background-color 0.3s ease; 
+        }
+
+        header:hover {
+            background-color: #1a252f; 
+        }
+
+        nav {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        nav:hover {
+            background-color: #555; 
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: inline-flex;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease; 
+         }
+
+        nav ul li a:hover {
+            background-color: #ff4500; 
+            transform: scale(1.1);
+        }
+
+        #mid {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+        }
+
+        #mid img {
+            width: 250px;
+            height: 250px;
+            margin: 0 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        #mid img:hover {
+            transform: scale(1.1); 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); 
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 50px;
+            transition: background-color 0.3s ease; 
+        }
+
+        footer:hover {
+            background-color: #444; 
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to Bike Zone</h1>
+        <p>Explore the world on two wheels!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Models</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div id="mid">
+        <img src="https://wallpapers.com/images/hd/front-view-of-kawasaki-h2r-wpmyab9q4lvyxvwx.jpg" alt="Bike 1">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRj_FQUXZIBMygce7DASb67mtVabwAcfApZ6Q&s" alt="Bike 2">
+        <img src="https://c4.wallpaperflare.com/wallpaper/565/558/457/heavy-bike-harley-davidson-harley-davidson-modified-wallpaper-preview.jpg" alt="Bike 3">
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bike Zone. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
