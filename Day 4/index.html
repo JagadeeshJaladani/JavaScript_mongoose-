@@ -1,0 +1,194 @@
+// Use an arrow function to reverse a given string. For example, if the input is "hello", the output should be "olleh".
+
+
+
+const reverseString = (str) => str.split('').reverse().join(''); 
+  console.log(reverseString("hello")); 
+
+
+
+  // Given an array of numbers, use an arrow function to create a new array that contains the
+// squares of those numbers. For example, if the input is [1, 2, 3], the output should be [1, 4, 9].
+
+const numbers = [1,2,3];
+const squares = numbers.map((number)=>number*number);
+
+
+console.log(squares);
+
+
+
+
+// Replace Function Expressions with arrow functions in the code below:
+
+// function ask(question, yes, no) {
+//  if (confirm(question)) yes();
+//  else no();
+// }
+// ask(
+//  "Do you agree?",
+//  function() { alert("You agreed."); },
+//  function() { alert("You canceled the execution."); }
+// );
+
+
+
+
+////////////////////////////////////////////////////////////////
+function ask(question, yes, no) {
+    if (confirm(question)) yes();
+    else no();
+  }
+  
+  ask(
+    "Do you agree?",
+    () => alert("You agreed."),
+    () => alert("You canceled the execution.")
+  );
+  
+  
+
+
+// 2. Identify the output of the following code
+const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+console.log(materials.map((material) => material.length));
+
+//[8, 6, 7, 9]
+
+
+
+
+//3. Write an arrow function called square that takes a number as an argument and returns its square.
+
+const square = (number) => number * number;
+console.log(square(5));
+
+
+/////////////////////////////////////////////////////////
+function debounce(func, delay) {
+    let timeoutId;
+
+    return function (...args) {
+        clearTimeout(timeoutId);
+
+        timeoutId = setTimeout(() => {
+            func(...args);
+        }, delay);
+    };
+}
+
+const handleResize = () => {
+    console.log("Window resized!");
+};
+
+const debouncedResize = debounce(handleResize, 500);
+
+setInterval(() => {
+    debouncedResize();
+}, 100);
+
+
+////////////////////////////////////////////////////////
+function groupAnagrams(strs) {
+    let map = new Map();
+    
+    for (let str of strs) {
+        let sortedStr = str.split('').sort().join('');
+        
+        if (!map.has(sortedStr)) {
+            map.set(sortedStr, []);
+        }
+        
+        map.get(sortedStr).push(str);
+    }
+    
+    return Array.from(map.values());
+}
+
+const strs = ["eat", "tea", "tan", "ate", "nat", "bat"];
+const result = groupAnagrams(strs);
+console.log(result);
+
+
+
+
+
+
+/////////////////////////////////////////////////////////////
+
+function longestSubString(s) {
+    let charSet = new Set();
+    let left = 0;
+    let maxLength = 0;
+    let result = "";
+
+    for (let right = 0; right < s.length; right++) {
+        while (charSet.has(s[right])) {
+            charSet.delete(s[left]);
+            left++;
+        }
+        
+        charSet.add(s[right]);
+        
+        if (right - left + 1 > maxLength) {
+            maxLength = right - left + 1;
+            result = s.slice(left, right + 1);
+        }
+    }
+    
+    return result;
+}
+
+const str = "abcabcbb";
+const answer = longestSubString(str);
+console.log("Longest Substring Without Repeating Characters:", answer);
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+
+//1.	Debounce Function: Implement a debounce function that limits the frequency of a function's execution when called repeatedly within a specified time frame. This is useful in scenarios like resizing or scrolling events.
+//2. Longest Substring Without Repeating Characters: Find the length of the longest substring without repeating characters.
+//3. Group Anagrams: Given an array of strings, group them into anagrams.
+//topics
+
+arrow function:   
+ // Traditional function expression
+const traditionalFunction = function(param1, param2) {
+    return param1 + param2;
+};
+// Arrow function
+const arrowFunction = (param1, param2) => param1 + param2;
+
+object literal enhancement:
+
+computed properties:
+
+how to create a server(nodejs)
+https v/s 
+
+  React Js
+Day 4
+1. Replace Function Expressions with arrow functions in the code below:
+function ask(question, yes, no) {
+ if (confirm(question)) yes();
+ else no();
+}
+ask(
+ "Do you agree?",
+ function() { alert("You agreed."); },
+ function() { alert("You canceled the execution."); }
+);
+2. Identify the output of the following code
+const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+console.log(materials.map((material) => material.length));
+3. Write an arrow function called square that takes a number as an argument and returns its
+square.
+4. Given an array of numbers, use an arrow function to create a new array that contains the
+squares of those numbers. For example, if the input is [1, 2, 3], the output should be [1, 4, 9].
+5. Use an arrow function to reverse a given string. For example, if the input is "hello", the output
+should be "olleh".
+6. Create a chainable object using arrow functions that allows you to set a value and then add
+or multiply it by a number. For example:
+const result = chainable(5).add(3).multiply(2); // result should be 16
