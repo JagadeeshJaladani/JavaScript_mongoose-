@@ -1,0 +1,18 @@
+Assignment 3
+You are developing a simple online shopping cart application. In this application, users can add items to their cart, and you want to display the total number of items in the cart as well as the total price of the items.
+Requirements:
+1.	Create a component called ShoppingCart.
+2.	Use the useState hook to manage the following state:
+3.	An array of items in the cart, where each item is an object containing id, name, price, and quantity.
+4.	A number representing the total count of items in the cart.
+5.	A number representing the total price of all items in the cart.
+Implement functions to:
+1.	Add an item to the cart (update both the total count and total price).
+2.	Remove an item from the cart (update both the total count and total price).
+3.	Display the list of items in the cart, along with their quantities and prices.
+4.	Show the total count and total price at the bottom of the cart.
+Question:
+How would you implement this ShoppingCart component using useState? Provide a code snippet that demonstrates how you would manage the state for adding and removing items, as well as calculating totals.
+
+Assignment 4
+You have a predefined list of items (e.g., names of fruits). You want to create a search bar where users can type in a query, and the list of items displayed gets filtered in real-time based on the query. Use useState to manage the search query and the filtered results, and use useEffect to update the filtered results whenever the query changes.
